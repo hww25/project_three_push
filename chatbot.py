@@ -53,6 +53,21 @@ st.set_page_config(page_title="My AI Chatbot", page_icon="🤖", layout="centere
 st.title("🤖 My AI Chatbot")
 st.caption("Step 6: classroom-ready version")
 
+with st.expander("📋 关于这个聊天机器人", expanded=True):
+    st.markdown("""
+    **这是一个功能丰富的 AI 聊天机器人应用，具有以下特点：**
+    
+    - **多角色预设**：支持通用助手、Python老师、法语陪练、旅行规划师、吐槽型朋友等多种角色
+    - **可配置模型**：支持自定义 API Base URL 和模型名称
+    - **灵活调参**：可调节温度参数控制回答的随机性
+    - **对话记忆**：自动保存对话历史，支持一键清空
+    
+    **使用方式：**
+    1. 在侧边栏输入 API Key（支持 DeepSeek 或 OpenAI 格式）
+    2. 选择一个角色预设，或自定义系统提示词
+    3. 在底部输入框中开始对话
+    """)
+
 if "messages" not in st.session_state:
     st.session_state.messages = []
 if "selected_role" not in st.session_state:
